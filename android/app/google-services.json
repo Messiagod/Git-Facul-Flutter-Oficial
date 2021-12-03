@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "176721725066",
+    "project_id": "flutter-faculdade",
+    "storage_bucket": "flutter-faculdade.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:176721725066:android:ffefc65d3b8a74c1c28f73",
+        "android_client_info": {
+          "package_name": "com.example.faculdade"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "176721725066-j65duqp3ba2cqcm390cedt89vvnekbud.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDMt9JNfcOKKPOE0H1pyBPvPl1Joa_XAAY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "176721725066-j65duqp3ba2cqcm390cedt89vvnekbud.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
