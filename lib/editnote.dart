@@ -4,12 +4,13 @@ import 'package:flutter/material.dart';
 
 class editnote extends StatefulWidget {
   DocumentSnapshot docid;
-  editnote({required this.docid});
+  editnote({Key? key, required this.docid}) : super(key: key);
 
   @override
   _editnoteState createState() => _editnoteState();
 }
 
+// ignore: camel_case_types
 class _editnoteState extends State<editnote> {
   TextEditingController title = TextEditingController();
   TextEditingController content = TextEditingController();
@@ -29,26 +30,27 @@ class _editnoteState extends State<editnote> {
           MaterialButton(
             onPressed: () {
               widget.docid.reference.update({
-                'title': title,
-                'content': content,
+                'title': title.text,
+                'content': content.text,
               }).whenComplete(() {
                 Navigator.pushReplacement(
-                    context, MaterialPageRoute(builder: (_) => MyApp()));
+                    context, MaterialPageRoute(builder: (_) => const Home()));
               });
             },
-            child: Text("save"),
+            child: const Text("save"),
           ),
           MaterialButton(
             onPressed: () {
               widget.docid.reference.delete().whenComplete(() {
                 Navigator.pushReplacement(
-                    context, MaterialPageRoute(builder: (_) => MyApp()));
+                    context, MaterialPageRoute(builder: (_) => const Home()));
               });
             },
-            child: Text("delete"),
+            child: const Text("delete"),
           ),
         ],
       ),
+      // ignore: avoid_unnecessary_containers
       body: Container(
         child: Column(
           children: [
@@ -56,12 +58,12 @@ class _editnoteState extends State<editnote> {
               decoration: BoxDecoration(border: Border.all()),
               child: TextField(
                 controller: title,
-                decoration: InputDecoration(
+                decoration: const InputDecoration(
                   hintText: 'title',
                 ),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 10,
             ),
             Expanded(
@@ -71,8 +73,8 @@ class _editnoteState extends State<editnote> {
                   controller: content,
                   expands: true,
                   maxLines: null,
-                  decoration: InputDecoration(
-                    hintText: 'content',
+                  decoration: const InputDecoration(
+                    hintText: 'horário',
                   ),
                 ),
               ),

@@ -21,15 +21,16 @@ class addnote extends StatelessWidget {
                 'content': content.text,
               }).whenComplete(() {
                 Navigator.pushReplacement(
-                    context, MaterialPageRoute(builder: (_) => Home()));
+                    context, MaterialPageRoute(builder: (_) => const Home()));
               });
             },
-            child: Text(
+            child: const Text(
               "save",
             ),
           ),
         ],
       ),
+      // ignore: avoid_unnecessary_containers
       body: Container(
         child: Column(
           children: [
@@ -37,12 +38,12 @@ class addnote extends StatelessWidget {
               decoration: BoxDecoration(border: Border.all()),
               child: TextField(
                 controller: title,
-                decoration: InputDecoration(
+                decoration: const InputDecoration(
                   hintText: 'title',
                 ),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 10,
             ),
             Expanded(
@@ -52,8 +53,8 @@ class addnote extends StatelessWidget {
                   controller: content,
                   expands: true,
                   maxLines: null,
-                  decoration: InputDecoration(
-                    hintText: 'content',
+                  decoration: const InputDecoration(
+                    hintText: 'Horário',
                   ),
                 ),
               ),
